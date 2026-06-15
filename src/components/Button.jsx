@@ -178,7 +178,7 @@ const Button = React.forwardRef(
         ref={ref}
         {...props}
       >
-        {icon}
+      {icon}
         <Typography variant="typo4">{children}</Typography>
         {toggable && <Arrow style={{ width: 9 }} />}
       </StyledButton>
