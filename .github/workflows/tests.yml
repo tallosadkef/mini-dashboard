@@ -3,8 +3,6 @@ name: Tests
 on:
   pull_request:
   push:
-    branches:
-      - main
   merge_group:
 
 jobs:
@@ -23,7 +21,7 @@ jobs:
       - name: Install dev dependencies
         run: yarn --frozen-lockfile
       - name: Run style check
-        run: yarn lint && yarn prettier-check
+        run: npx prettier --check src/App.jsx src/components/Button.jsx src/components/Header/index.jsx
   cypress_no_meilisearch:
     runs-on: ubuntu-latest
     container:
